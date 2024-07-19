@@ -18,7 +18,7 @@ export const AuthContextProvider = ({ children }) => {
     const addMovieToFavourites = async (userId, movieId) => {
         try {
             const response = await axios.post(
-                `http://localhost:3000/api/users/${userId}/favorite-movies`,
+                `https://movieenthusiast-backend.onrender.com/api/users/${userId}/favorite-movies`,
                 { movie: movieId },
                 {
                     headers: {
