@@ -1,0 +1,9 @@
+@font-face {
+    font-family: zap;
+    src: url('../src/assets/fonts/glorious.ttf');
+  }
+@font-face {
+    font-family: tap;
+    src: url('../src/assets/fonts/mono.ttf');
+  }
+
