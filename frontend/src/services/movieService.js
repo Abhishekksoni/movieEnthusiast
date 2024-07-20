@@ -79,7 +79,7 @@ export const removeFavoriteMovie = async (userId, movieId) => {
 export const fetchUserProfile = async (userId) => {
   try {
     const token = getAuthToken();
-    const response = await axios.get(`https://movieenthusiast-backend.onrender.com/${userId}`, {}, {
+    const response = await axios.get(`https://movieenthusiast-backend.onrender.com/api/users/${userId}`, {}, {
       headers: {
         Authorization: `Bearer ${token}`
       }
