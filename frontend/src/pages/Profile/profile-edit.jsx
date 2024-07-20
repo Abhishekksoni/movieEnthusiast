@@ -52,7 +52,7 @@ useEffect(() => {
 
 const handleProfileUpdate = async() => {
     try {
-        const response = await axios.put(`https://movieenthusiast-backend.onrender.com/users/profile-edit/${authUser._id}`, {
+        const response = await axios.put(`https://movieenthusiast-backend.onrender.com/api/users/profile-edit/${authUser._id}`, {
             fullName,
             username
         }, {
