@@ -38,7 +38,7 @@ export const addMovieToFavorites = async (movie, userId) => {
   };
 
   try {
-    const response = await axios.post(`http://localhost:3000/api/users/${userId}/favorite-movies`, movieDetails, {
+    const response = await axios.post(`https://movieenthusiast-backend.onrender.com/${userId}/favorite-movies`, movieDetails, {
       headers: {
         'Content-Type': 'application/json'
       }
@@ -52,7 +52,7 @@ export const addMovieToFavorites = async (movie, userId) => {
 };
 export const fetchFavoriteMovies = async (userId) => {
   try {
-    const response = await axios.get(`http://localhost:3000/api/users/${userId}/favorite-movies`);
+    const response = await axios.get(`https://movieenthusiast-backend.onrender.com/api/users/${userId}/favorite-movies`);
     return response.data.favoriteMovies; // Assuming the API returns an object with a key 'favoriteMovies' containing the list
   } catch (error) {
     console.error('Error fetching favorite movies:', error);
@@ -67,7 +67,7 @@ export const removeFavoriteMovie = async (userId, movieId) => {
   }
   try {
     
-    const response = await axios.delete(`http://localhost:3000/api/users/${userId}/favorite-movies/${movieId}`, movieDetails);
+    const response = await axios.delete(`https://movieenthusiast-backend.onrender.com/${userId}/favorite-movies/${movieId}`, movieDetails);
     console.log('Movie removed from favorites:', response.data);
     return response.data;
   } catch (error) {
@@ -79,7 +79,7 @@ export const removeFavoriteMovie = async (userId, movieId) => {
 export const fetchUserProfile = async (userId) => {
   try {
     const token = getAuthToken();
-    const response = await axios.get(`http://localhost:3000/api/users/${userId}`, {}, {
+    const response = await axios.get(`https://movieenthusiast-backend.onrender.com/${userId}`, {}, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -94,7 +94,7 @@ export const fetchUserProfile = async (userId) => {
 export const followUser = async (username) => {
   try {
     const token = getAuthToken();
-    const response = await axios.post(`/api/users/follow/${username}`, {}, {
+    const response = await axios.post(`https://movieenthusiast-backend.onrender.com/api/users/follow/${username}`, {}, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -108,7 +108,7 @@ export const followUser = async (username) => {
 export const unfollowUser = async (username) => {
   try {
     const token = getAuthToken();
-    const response = await axios.post(`/api/users/unfollow/${username}`, {}, {
+    const response = await axios.post(`https://movieenthusiast-backend.onrender.com/api/users/unfollow/${username}`, {}, {
       headers: {
         Authorization: `Bearer ${token}`
       }
