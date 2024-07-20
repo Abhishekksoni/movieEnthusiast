@@ -38,7 +38,7 @@ export const addMovieToFavorites = async (movie, userId) => {
   };
 
   try {
-    const response = await axios.post(`https://movieenthusiast-backend.onrender.com/${userId}/favorite-movies`, movieDetails, {
+    const response = await axios.post(`https://movieenthusiast-backend.onrender.com/api/users/${userId}/favorite-movies`, movieDetails, {
       headers: {
         'Content-Type': 'application/json'
       }
