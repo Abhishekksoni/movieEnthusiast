@@ -20,8 +20,9 @@ import ProfileFav from './pages/Profile/profile-fav';
 import About from './components/about';
 import MovieDetails from './pages/Profile/movie-detail';
 import ProfileEdit from './pages/Profile/profile-edit';
-import MovieList from './pages/Profile/movie-list';
-import PostLists from './pages/Home/post-lists'
+
+import PostLists from './pages/Home/posts-lists';
+// import PostLists from './pages/Home/post-lists'
 function App() {
   const {authUser} = useAuthContext();
 
