@@ -6,9 +6,9 @@ import NavbarHome from './navbar-home';
 
 const About = () => {
   return (
-    <Box sx={{ position: 'relative', margin: 0, padding: 0, background: 'black' }}>
+    <Box sx={{ position: 'relative', margin: 0, padding: 0, background: 'black', height:'auto', pb:'10px' }}>
       <NavbarHome />
-      <Container maxWidth="lg" sx={{ pt: 10, mb: 8 }}>
+      <Container maxWidth="lg" sx={{ pt: 10, mb: 2 }}>
         <Paper elevation={3} sx={{ p: 4, borderRadius: 3, background: '#333', color: 'white' }}>
           <Grid container spacing={4}>
             <Grid item xs={12} md={3}>
@@ -118,7 +118,7 @@ const About = () => {
               <Typography variant="h6" align="center" sx={{ mt: 2 }}>
                 Abhishek Soni
               </Typography>
-              <Typography variant="body2" align="center" sx={{ color: 'text.secondary' }}>
+              <Typography variant="body2" align="center" sx={{ color: '' }}>
                 @abhisheksoni
               </Typography>
               <Typography variant="body2" paragraph>

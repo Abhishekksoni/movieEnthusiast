@@ -21,6 +21,7 @@ import About from './components/about';
 import MovieDetails from './pages/Profile/movie-detail';
 import ProfileEdit from './pages/Profile/profile-edit';
 import MovieList from './pages/Profile/movie-list';
+import PostLists from './pages/Home/post-lists'
 function App() {
   const {authUser} = useAuthContext();
 
@@ -36,12 +37,14 @@ function App() {
        <Route path='/dashboard/home' element={authUser ? <Feed/> : <Navigate to='/signin'/>} />
        <Route path='/dashboard/chat' element={authUser ? <Chat/> : <Navigate to='/'/>} />
        <Route path='/dashboard/films' element={authUser ? <Films/> : <Navigate to='/'/>} />
-       <Route path='/dashboard/activity' element={authUser ? <Activity/> : <Navigate to='/'/>} />
+       <Route path='/dashboard/activity' element={authUser ? <PostLists /> : <Navigate to='/'/>} />
        <Route path='/dashboard/profile/:userId'  element={authUser ? <ProfileHome/> : <Navigate to='/'/>} />
        <Route path='/dashboard/profile-edit/:userId'  element={authUser ? <ProfileEdit/> : <Navigate to='/'/>} />
        <Route path='/dashboard/profile/films' element={authUser ? <ProfileFilm/> : <Navigate to='/'/>} />
        <Route path='/dashboard/profile/favourites/:userId' element={authUser ? <ProfileFav/> : <Navigate to='/'/>} />
        <Route path='/dashboard/films/movie/:id' element={authUser ? <MovieDetails/> : <Navigate to = '/'/> } />
+       <Route path='/dashboard/posts' element={authUser ? <PostLists /> : <Navigate to = '/'/> } />
+       <Route path='dashboard/lists' element={authUser ? <PostLists /> : <Navigate to = '/'/> } />
        {/* <Route path='/dashboard/films/movie/:id/create-list' element={authUser ? <MovieList/> : <Navigate to = '/'/> } /> */}
       
    

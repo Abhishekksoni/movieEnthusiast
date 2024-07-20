@@ -207,10 +207,10 @@ export default function NavDash() {
     <StyledNavLink to="/dashboard/films" isactive={location.pathname === '/dashboard/films' ? 1 : 0} style={{textDecoration:'none'}} >
             <Typography sx={{color:'white',}}>Films</Typography>
     </StyledNavLink>
-    <StyledNavLink to="/dashboard/profile/posts" isactive={location.pathname === '/profile/post' ? 1 : 0} style={{textDecoration:'none'}} >
+    <StyledNavLink to="/dashboard/posts" isactive={location.pathname === '/dashboard/posts' ? 1 : 0} style={{textDecoration:'none'}} >
             <Typography sx={{color:'white'}}>Posts</Typography>
     </StyledNavLink>
-    <StyledNavLink to="/dashboard/profile/lists" isactive={location.pathname === '/profile/lists' ? 1 : 0} style={{textDecoration:'none'}} >
+    <StyledNavLink to="/dashboard/lists" isactive={location.pathname === '/dashboard/lists' ? 1 : 0} style={{textDecoration:'none'}} >
             <Typography sx={{color:'white'}}>Lists</Typography>
     </StyledNavLink>
     <StyledNavLink to="/dashboard/profile/watchlist" isactive={location.pathname === '/profile/watchlist' ? 1 : 0} >
