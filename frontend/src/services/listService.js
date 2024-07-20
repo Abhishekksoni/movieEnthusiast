@@ -6,7 +6,7 @@ const getAuthToken = () => {
 export const createList = async (name) => {
     try {
         const token = getAuthToken();
-        const response = await axios.post('https://movieenthusiast-backend.onrender.com/api/lists', { name }, {
+        const response = await axios.post('/api/lists', { name }, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -22,7 +22,7 @@ export const createList = async (name) => {
 export const getLists = async () => {
     try {
         const token = getAuthToken();
-        const response = await axios.get('https://movieenthusiast-backend.onrender.com/api/lists', {
+        const response = await axios.get('/api/lists', {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -38,7 +38,7 @@ export const getLists = async () => {
 export const addMovietoList = async (listId, movieId) => {
     try {
         const token = getAuthToken();
-        const response = await axios.post(`https://movieenthusiast-backend.onrender.com/api/lists/${listId}/movies`, { movieId }, {
+        const response = await axios.post(`/api/lists/${listId}/movies`, { movieId }, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
