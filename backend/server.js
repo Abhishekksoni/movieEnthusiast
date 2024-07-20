@@ -63,7 +63,7 @@ app.use("/api/", movieRoutes);
 
 // Serve static files from the 'dist' directory
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'dist'), {
+app.use(express.static(path.join(__dirname, '../frontend/dist'), {
   setHeaders: (res, path) => {
     if (path.endsWith('.js')) {
       res.setHeader('Content-Type', 'application/javascript');
@@ -73,7 +73,7 @@ app.use(express.static(path.join(__dirname, 'dist'), {
 
 // Fallback to index.html for SPA
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '../frontend/dist', 'index.html'));
 });
 
 // Start server
