@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { gsap } from 'gsap';
 import ScrollMagic from 'scrollmagic';
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
-
+import bombVideo from "../assets/video/bomb.mp4"
 import { Link } from 'react-router-dom';
 import NavbarHome from './navbar-home';
 
@@ -81,7 +81,7 @@ const VideoAnimation = () => {
           <Typography variant="h1" className="effh" sx={{ zIndex: 4, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white', fontSize:'25px'}}>
             Lights, Camera, Action! Your Ultimate Movie Destination.
           </Typography>
-          <video ref={videoRef} src="src/assets/video/bomb.mp4" autoPlay muted style={{ width: '100%', height: '100%' }}></video>
+          <video ref={videoRef} src={bombVideo} autoPlay muted style={{ width: '100%', height: '100%' }}></video>
         </Box>
       </Box>
     </Box>
