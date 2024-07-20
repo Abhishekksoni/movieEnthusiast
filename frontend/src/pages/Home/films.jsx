@@ -174,7 +174,8 @@ const getMovies = async (page = 1, query = '') => {
             </Select>
           </Box>
           <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(5, minmax(10px, 1fr))', gap: 2, marginTop: '5vh' }}>
-            {movies.map((movie) => (
+            {movies.data > 0 ? (
+             movies.map((movie) => (
               <NavLink key={movie.id} to={`/dashboard/films/movie/${movie.id}`}   state={{ from: location.pathname, genre: selectedGenre, currentPage }}  style={{ textDecoration: 'none' }}>
                 <Box
                   sx={{
@@ -208,7 +209,9 @@ const getMovies = async (page = 1, query = '') => {
                   />
                 </Box>
               </NavLink>
-            ))}
+            )) ) : (
+              <p>No data available</p>
+            )}
           </Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 3, mb: 5, alignItems: 'center' }}>
             <Button onClick={handlePrevPage} disabled={currentPage === 1} sx={{ color: 'white', border: '1px solid white' }}>Previous</Button>
