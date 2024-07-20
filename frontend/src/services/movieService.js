@@ -67,7 +67,7 @@ export const removeFavoriteMovie = async (userId, movieId) => {
   }
   try {
     
-    const response = await axios.delete(`https://movieenthusiast-backend.onrender.com/${userId}/favorite-movies/${movieId}`, movieDetails);
+    const response = await axios.delete(`https://movieenthusiast-backend.onrender.com/api/users/${userId}/favorite-movies/${movieId}`, movieDetails);
     console.log('Movie removed from favorites:', response.data);
     return response.data;
   } catch (error) {
